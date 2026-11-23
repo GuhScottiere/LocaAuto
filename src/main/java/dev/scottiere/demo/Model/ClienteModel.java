@@ -11,4 +11,12 @@ public class ClienteModel {
     private String nome;
     private int idade;
     private String email;
+
+
+    public ClienteModel(Long id, String nome, int idade, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.email = email;
+    }
 }
