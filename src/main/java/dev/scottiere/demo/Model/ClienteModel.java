@@ -2,6 +2,8 @@ package dev.scottiere.demo.Model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_clientes")
 public class ClienteModel {
@@ -12,8 +14,11 @@ public class ClienteModel {
     private int idade;
     private String email;
 
+    @OneToMany(mappedBy = "cliente")
+    private List<CarroModel> carro;
+
      public ClienteModel(){
-         
+
      }
 
     public ClienteModel(Long id, String nome, int idade, String email) {
